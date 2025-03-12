@@ -1,0 +1,127 @@
+
+/* General Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: 'Arial', sans-serif;
+   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   overflow: hidden;
+ }
+ 
+ /* Glass Effect Forms */
+ .glass-form {
+   background: rgba(255, 255, 255, 0.8);
+   backdrop-filter: blur(10px);
+   border-radius: 15px;
+   padding: 30px;
+   width: 100%;
+   max-width: 500px;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+ 
+ .glass-form h2 {
+   color: #333;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ 
+ .input-group {
+   margin-bottom: 20px;
+ }
+ 
+ .input-group label {
+   color: #555;
+   display: block;
+   margin-bottom: 5px;
+ }
+ 
+ .input-group input {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   background: rgba(255, 255, 255, 0.9);
+   color: #333;
+   font-size: 16px;
+ }
+ 
+ button {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   background: #4a90e2;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+ 
+ button:hover {
+   background: #357abd;
+ }
+ 
+ /* Inventory Page */
+ .inventory-container {
+   background: rgba(255, 255, 255, 0.8);
+   backdrop-filter: blur(10px);
+   border-radius: 15px;
+   padding: 30px;
+   width: 100%;
+   max-width: 800px;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   text-align: center;
+ }
+ 
+ .product-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin-top: 20px;
+ }
+ 
+ .product-item {
+   background: rgba(255, 255, 255, 0.9);
+   border-radius: 10px;
+   padding: 20px;
+   width: 200px;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .product-item img {
+   width: 100%;
+   border-radius: 10px;
+   margin-bottom: 10px;
+ }
+ 
+ .product-item p {
+   margin: 5px 0;
+   color: #333;
+ }
+ 
+ .back-button {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background: #4a90e2;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+ 
+ .back-button:hover {
+   background: #357abd;
+ }
