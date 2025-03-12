@@ -41,3 +41,22 @@ if (!isset($_SESSION['userid'])) {
 </body>
 </html>
 
+<?php
+if (isset($_POST['addProduct'])) {
+    include 'db.php';
+
+    // File upload handling
+    $targetDir = "uploads/";
+    $fileName = basename($_FILES['productImage']['name']);
+    $targetFilePath = $targetDir . $fileName;
+    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+    // Allow certain file formats
+    $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+    if (in_array($fileType, $allowTypes)) {
+        // Upload file to server
+        if (move_uploaded_file($_FILES['productImage']['tmp_name'], $targetFilePath)) {
+            // Insert product into database
+            $name = $_POST['productName'];
+            $price = $_POST['productPrice'];
+            $quantity = $_POST['productQuantity'];
