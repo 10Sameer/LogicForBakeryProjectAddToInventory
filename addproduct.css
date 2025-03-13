@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Glass Effect Container */
+.add-product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.glass-form {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+h2 {
+    color: black ;
+    font-size: 1.5rem;
+}
+
+
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: #fff; 
+    color: #000; 
+}
+
+input:focus {
+    border-color: #ff758c; /* Highlight on focus */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+  
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-product-container {
+        max-width: 90%;
+    }
+}
