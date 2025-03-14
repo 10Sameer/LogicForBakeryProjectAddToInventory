@@ -40,3 +40,36 @@ if (!isset($_SESSION['userid'])) {
 </body>
 </html>
 
+<?php
+if (isset($_POST['addProduct'])) {
+    include 'db.php';
+
+    // File upload handling
+    $targetDir = "uploads/";
+    $fileName = basename($_FILES['productImage']['name']);
+    $targetFilePath = $targetDir . $fileName;
+    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+    // Allow certain file formats
+    $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+    if (in_array($fileType, $allowTypes)) {
+        // Upload file to server
+        if (move_uploaded_file($_FILES['productImage']['tmp_name'], $targetFilePath)) {
+            // Insert product into database
+            $name = $_POST['productName'];
+            $price = $_POST['productPrice'];
+            $quantity = $_POST['productQuantity'];
+            $sql = "INSERT INTO products (image, name, price, quantity) VALUES ('$fileName', '$name', $price, $quantity)";
+            if ($conn->query($sql) === TRUE) {
+                echo "<script>alert('Product added successfully!'); window.location.href='AddedInventory.php';</script>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    } else {
+        echo "Sorry, only JPG, JPEG, PNG, & GIF files are allowed.";
+    }
+}
+?>
