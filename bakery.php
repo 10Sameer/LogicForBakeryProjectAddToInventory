@@ -44,3 +44,19 @@ $result = $conn->query($sql);
       ?>
     </div>
   </div>
+
+  script>
+    const searchInput = document.getElementById('searchInput');
+    const productGrid = document.getElementById('productGrid');
+    const allProducts = Array.from(document.querySelectorAll('.product-item'));
+    
+    // Store the original products HTML for reset
+    const originalProductsHTML = productGrid.innerHTML;
+    
+    searchInput.addEventListener('input', function () {
+      const searchTerm = searchInput.value.toLowerCase();
+   
+    
+  </script>
+</body>
+</html>
