@@ -68,7 +68,22 @@ $result = $conn->query($sql);
         return productName.includes(searchTerm);
       });
       
-    
+      if (matchingProducts.length === 0) {
+        // If no products match, show a message
+        productGrid.innerHTML = '<p>No products found.</p>';
+      } else {
+        // Clear the grid
+        productGrid.innerHTML = '';
+        
+        // Append only matching products to the grid
+        // This ensures they appear side by side without gaps
+        matchingProducts.forEach(product => {
+          // Clone the product to avoid reference issues
+          const productClone = product.cloneNode(true);
+          productGrid.appendChild(productClone);
+        });
+      }
+    });
   </script>
 </body>
 </html>
