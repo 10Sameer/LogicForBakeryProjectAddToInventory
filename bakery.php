@@ -45,7 +45,7 @@ $result = $conn->query($sql);
     </div>
   </div>
 
-  script>
+  <script>
     const searchInput = document.getElementById('searchInput');
     const productGrid = document.getElementById('productGrid');
     const allProducts = Array.from(document.querySelectorAll('.product-item'));
@@ -55,7 +55,19 @@ $result = $conn->query($sql);
     
     searchInput.addEventListener('input', function () {
       const searchTerm = searchInput.value.toLowerCase();
-   
+      
+      if (searchTerm === '') {
+        // If search is empty, restore original grid
+        productGrid.innerHTML = originalProductsHTML;
+        return;
+      }
+      
+      // Filter products that match the search term
+      const matchingProducts = allProducts.filter(product => {
+        const productName = product.getAttribute('data-name').toLowerCase();
+        return productName.includes(searchTerm);
+      });
+      
     
   </script>
 </body>
