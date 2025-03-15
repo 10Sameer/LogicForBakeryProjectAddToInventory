@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5e6d3;
+  }
+  
+  .bakery-container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #6b4226;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
