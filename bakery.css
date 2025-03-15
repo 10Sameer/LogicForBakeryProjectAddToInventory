@@ -74,4 +74,23 @@ body {
     cursor: pointer;
     font-weight: bold;
   }
+  .add-to-cart {
+    background-color: #6b4226;
+    color: white;
+  }
+  
+  .buy-now {
+    background-color: #d4a056;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .product-item img {
+      height: 150px;
+    }
+  }
   
