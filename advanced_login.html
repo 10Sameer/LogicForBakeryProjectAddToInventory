@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoAuth - Advanced Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="background-animation"></div>
+    <div class="login-box">
+      <h1>Welcome Back</h1>
+      <p>Log in to continue</p>
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder=" " required>
+          <label for="password">Password</label>
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+        <button type="submit">Log In</button>
+      </form>
+      <div class="alternative-login">
+        <p>Or log in with:</p>
+        <div class="biometric-options">
+          <button onclick="simulateFacialRecognition()">👤 Facial Recognition</button>
+          <button onclick="simulateFingerprint()">🖐️ Fingerprint</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
