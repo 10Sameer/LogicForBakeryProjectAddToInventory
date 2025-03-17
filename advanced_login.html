@@ -33,6 +33,40 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    }
+    
+    
+    function simulateFacialRecognition() {
+      alert('Facial recognition simulated. Redirecting...');
+    }
+    
+    // Simulate Fingerprint Scan
+    function simulateFingerprint() {
+      alert('Fingerprint scan simulated. Redirecting...');
+   
+    }
+    
+  
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+    
+      
+      if (email && password) {
+        alert(`Logged in as ${email}`);
+        
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });</script>
 </body>
 </html>
