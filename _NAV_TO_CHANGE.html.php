@@ -7,7 +7,91 @@
     <link rel="stylesheet" href="">
     <script src="https://kit.fontawesome.com/8e5a29acab.js" crossorigin="anonymous"></script>
     <style>
-    
+        /* Header Styles */
+        .header {
+            background-color: white; /* Set background to white */
+            color: #333; /* Dark text color for contrast */
+            padding: 10px 20px; /* Adjust padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            position: relative;
+        }
+
+        /* Logo Styles */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-right: 20px; /* Reduce gap between logo and navbar */
+        }
+
+        .logo .fa-bread-slice {
+            font-size: 30px;
+            color: #783b31; /* Brown color for the bread icon */
+        }
+
+        .logo .heading-name {
+            font-size: 35px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+
+        /* Navbar Styles */
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li a {
+            color: #333; /* Dark text color */
+            text-decoration: none;
+            font-size: 18px; /* Slightly smaller font size */
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #783b31; /* Brown color on hover */
+        }
+
+        /* Icons Container Styles */
+        #icons-container-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px; /* Space between icons and text */
+        }
+
+        /* Hello User Message Styles */
+        .user {
+            margin: 0 20px; /* Add margin to separate from navbar and icons */
+            font-size: 16px;
+            color: #333; /* Dark text color */
+        }
+
+        /* Cart Icon Styles */
+        .cart-icon {
+            position: relative;
+            font-size: 24px;
+            color: #333; /* Dark text color */
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+ 
+     
     </style>
 </head>
 <body>
