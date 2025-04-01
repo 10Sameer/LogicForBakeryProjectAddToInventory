@@ -45,6 +45,36 @@
             ?>
         </div>
 
+        <!-- Icons Container -->
+        <div class="icons" id="icons-container-nav">
+            <!-- Cart Icon -->
+            <a href="cart.php">
+                <div id="cart-btn" class="fa-solid fa-cart-shopping cart-icon">
+                    <span id="cart-count" class="cart-count"></span>
+                </div>
+            </a>
+
+            <!-- Logout Icon -->
+            <a href="user-logout.php">
+                <div id="cart-btn1" class="fa-solid fa-right-from-bracket"></div>
+            </a>
+        </div>
+
+        <!-- Toggle Button for Mobile -->
+        <div class="toggle2" id="toggle2">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Dropdown Menu for Mobile -->
+        <div class="drop-down" id="drop-down">
+            <ul>
+                <li class="item"><a href="bakery.php">Home</a></li>
+                <li class="item"><a href="about.php">About Us</a></li>
+                <li class="item"><a href="#product">Product</a></li>
+                <li class="item"><a href="#gallery">Gallery</a></li>
+                <li class="item"><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
     </header>
 
    
