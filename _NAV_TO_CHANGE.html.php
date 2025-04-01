@@ -90,7 +90,52 @@
             font-size: 12px;
         }
 
- 
+        /* Logout Icon Styles */
+        #cart-btn1 {
+            font-size: 24px;
+            color: #333; /* Dark text color */
+            cursor: pointer;
+        }
+
+        /* Toggle Button Styles */
+        .toggle2 {
+            display: none; /* Hide by default */
+            font-size: 24px;
+            color: #333; /* Dark text color */
+            cursor: pointer;
+        }
+
+        /* Dropdown Menu Styles */
+        .drop-down {
+            display: none; /* Hide by default */
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .drop-down ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .drop-down ul li a {
+            color: #333; /* Dark text color */
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .drop-down ul li a:hover {
+            background-color: #f1f1f1; /* Light gray on hover */
+        }
+
      
     </style>
 </head>
