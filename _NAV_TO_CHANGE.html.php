@@ -77,6 +77,12 @@
         </div>
     </header>
 
-   
+    <script>
+        // Toggle dropdown menu
+        document.getElementById('toggle2').addEventListener('click', function () {
+            const dropdown = document.getElementById('drop-down');
+            dropdown.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
