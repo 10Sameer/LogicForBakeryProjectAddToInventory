@@ -136,7 +136,35 @@
             background-color: #f1f1f1; /* Light gray on hover */
         }
 
-     
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                display: none; /* Hide navbar on small screens */
+            }
+
+            .toggle2 {
+                display: block; /* Show toggle button */
+            }
+
+            .drop-down.active {
+                display: block; /* Show dropdown when active */
+            }
+
+            /* Hide the "Hello User" message on small screens */
+            .user {
+                display: none;
+            }
+
+            /* Adjust logo and icons for smaller screens */
+            .logo {
+                margin-right: 10px; /* Reduce gap between logo and toggle button */
+            }
+
+            /* Add gaps between cart and logout icons */
+            #icons-container-nav {
+                gap: 15px; /* Adjust this value as needed */
+            }
+        }
     </style>
 </head>
 <body>
