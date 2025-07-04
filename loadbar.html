@@ -50,7 +50,16 @@
     const progressBar = document.getElementById("progress-bar");
     const percentage = document.getElementById("percentage");
 
- 
+    const interval = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(interval);
+        percentage.textContent = "Done!";
+        return;
+      }
+      progress++;
+      progressBar.style.width = progress + "%";
+      percentage.textContent = progress + "%";
+    }, 60); 
   </script>
 
 </body>
