@@ -9,13 +9,13 @@
     <style>
         /* Header Styles */
         .header {
-            background-color: white; /* Set background to white */
-            color: #333; /* Dark text color for contrast */
-            padding: 10px 20px; /* Adjust padding */
+            background-color: white; 
+            color: #333; 
+            padding: 10px 20px; 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
             position: relative;
         }
 
@@ -24,18 +24,18 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-right: 20px; /* Reduce gap between logo and navbar */
+            margin-right: 20px; 
         }
 
         .logo .fa-bread-slice {
             font-size: 30px;
-            color: #783b31; /* Brown color for the bread icon */
+            color: #783b31; 
         }
 
         .logo .heading-name {
             font-size: 35px;
             font-weight: bold;
-            color: #333; /* Dark text color */
+            color: #333; 
         }
 
         /* Navbar Styles */
@@ -48,35 +48,35 @@
         }
 
         .navbar ul li a {
-            color: #333; /* Dark text color */
+            color: #333; 
             text-decoration: none;
-            font-size: 18px; /* Slightly smaller font size */
+            font-size: 18px; 
             transition: color 0.3s ease;
         }
 
         .navbar ul li a:hover {
-            color: #783b31; /* Brown color on hover */
+            color: #783b31; 
         }
 
         /* Icons Container Styles */
         #icons-container-nav {
             display: flex;
             align-items: center;
-            gap: 25px; /* Space between icons and text */
+            gap: 25px; 
         }
 
         /* Hello User Message Styles */
         .user {
-            margin: 0 20px; /* Add margin to separate from navbar and icons */
+            margin: 0 20px; 
             font-size: 16px;
-            color: #333; /* Dark text color */
+            color: #333; 
         }
 
         /* Cart Icon Styles */
         .cart-icon {
             position: relative;
             font-size: 24px;
-            color: #333; /* Dark text color */
+            color: #333; 
         }
 
         .cart-count {
@@ -93,21 +93,21 @@
         /* Logout Icon Styles */
         #cart-btn1 {
             font-size: 24px;
-            color: #333; /* Dark text color */
+            color: #333;
             cursor: pointer;
         }
 
         /* Toggle Button Styles */
         .toggle2 {
-            display: none; /* Hide by default */
+            display: none; 
             font-size: 24px;
-            color: #333; /* Dark text color */
+            color: #333; 
             cursor: pointer;
         }
 
         /* Dropdown Menu Styles */
         .drop-down {
-            display: none; /* Hide by default */
+            display: none; 
             position: absolute;
             top: 100%;
             right: 0;
@@ -124,7 +124,7 @@
         }
 
         .drop-down ul li a {
-            color: #333; /* Dark text color */
+            color: #333; 
             text-decoration: none;
             font-size: 18px;
             display: block;
@@ -133,38 +133,37 @@
         }
 
         .drop-down ul li a:hover {
-            background-color: #f1f1f1; /* Light gray on hover */
+            background-color: #f1f1f1; 
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
             .navbar {
-                display: none; /* Hide navbar on small screens */
+                display: none; 
             }
 
             .toggle2 {
-                display: block; /* Show toggle button */
+                display: block;
             }
 
             .drop-down.active {
-                display: block; /* Show dropdown when active */
+                display: block; 
             }
 
-            /* Hide the "Hello User" message on small screens */
-            .user {
+          .user {
                 display: none;
             }
 
-            /* Adjust logo and icons for smaller screens */
+            
             .logo {
-                margin-right: 10px; /* Reduce gap between logo and toggle button */
+                margin-right: 10px; 
             }
 
-            /* Add gaps between cart and logout icons */
+            
             #icons-container-nav {
-                gap: 15px; /* Adjust this value as needed */
-            }
+                gap: 15px; 
         }
+    }
     </style>
 </head>
 <body>
