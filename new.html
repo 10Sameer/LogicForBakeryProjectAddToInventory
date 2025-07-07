@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Loading Bar with Start and Reset</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .progress-container {
+      width: 80%;
+      max-width: 500px;
+      height: 30px;
+      background: #222;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00ffcc88;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(270deg, #00ffcc, #00bfff, #ff00cc);
+      background-size: 600% 600%;
+      animation: gradientFlow 4s ease infinite;
+      box-shadow: 0 0 20px #00ffcc;
+      transition: width 0.3s ease;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .percentage {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .success {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ffcc;
+      margin-top: 10px;
+      display: none;
+      animation: popZoom 1s ease;
+    }
+
+    @keyframes popZoom {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .start-btn {
+      background: #00ffcc;
+      color: #000;
+    }
+
+    .start-btn:hover {
+      background: #00e6b8;
+    }
+
+    .reset-btn {
+      background: #ff4444;
+      color: #fff;
+    }
+
+    .reset-btn:hover {
+      background: #dd2222;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <div class="percentage" id="percentage">0%</div>
+  <div class="success" id="success-msg">✅ Success!</div> <br>
+
+  <div class="buttons">
+    <button class="start-btn" onclick="startLoading()">Start</button>
+    <button class="reset-btn" onclick="resetLoading()">Reset</button>
+  </div>
+
+  <!-- 🔊 Success Sound -->
+  <audio id="success-sound" src="ElevenLabs_Text_to_Speech_audio.mp3" preload="auto"></audio>
+
+  <script>
+    let progress = 0;
+    let interval;
+    const progressBar = document.getElementById("progress-bar");
+    const percentage = document.getElementById("percentage");
+    const successMsg = document.getElementById("success-msg");
+    const successSound = document.getElementById("success-sound");
+
+    function startLoading() {
+      clearInterval(interval);
+      successMsg.style.display = "none";
+      progress = 0;
+      progressBar.style.width = "0%";
+      percentage.textContent = "0%";
+
+      interval = setInterval(() => {
+        if (progress >= 100) {
+          clearInterval(interval);
+          progressBar.style.width = "100%";
+          percentage.textContent = "100%";
+          successMsg.style.display = "block";
+          successSound.play();
+          return;
+        }
+        progress++;
+        progressBar.style.width = progress + "%";
+        percentage.textContent = progress + "%";
+      }, 40);
+    }
+
+    function resetLoading() {
+      clearInterval(interval);
+      progress = 0;
+      progressBar.style.width = "0%";
+      percentage.textContent = "0%";
+      successMsg.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
