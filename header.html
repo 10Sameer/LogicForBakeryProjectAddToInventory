@@ -175,6 +175,22 @@
     </div>
   </header>
 
+  <script>
+    function toggleUserDropdown(event) {
+      const dropdown = document.getElementById("userDropdown");
+      dropdown.classList.toggle("show");
+      event.stopPropagation(); // prevent event from reaching window
+    }
 
+    function toggleNav() {
+      document.getElementById("mainNav").classList.toggle("active");
+    }
+
+    // Hide dropdown when clicked outside
+    window.addEventListener("click", function () {
+      const dropdown = document.getElementById("userDropdown");
+      dropdown.classList.remove("show");
+    });
+  </script>
 </body>
 </html>
