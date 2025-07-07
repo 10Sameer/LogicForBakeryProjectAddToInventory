@@ -116,6 +116,31 @@
       transition: 0.4s;
     }
 
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #002244;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid #003366;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
