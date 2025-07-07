@@ -20,7 +20,23 @@
       <a href="#">FEEDBACK</a>
     </nav>
 
-   
+    <div style="display: flex; align-items: center;">
+      <div class="user-menu" onclick="toggleUserDropdown(event)">
+        <i class="fas fa-user user-icon"></i>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="#">User History</a>
+          <a href="#">Log In</a>
+          <a href="#">Log Out</a>
+          <a href="#">Tracking</a>
+        </div>
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
   </header>
 
 
